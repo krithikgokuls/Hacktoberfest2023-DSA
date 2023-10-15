@@ -1,0 +1,43 @@
+Problem:
+Write a program to find and replace the word in a given string:
+
+I/P:
+I love to eat Python
+eat 
+code
+O/P:
+I love to code Python
+
+Program in C language:-
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i,w=0,c=0,j;
+    char a[100],f[100],r[100],b[100][100];
+    scanf("%[^\n]",a);
+    scanf("%s",f);
+    scanf("%s",r);
+    for(i=0;a[i];i++)
+    {
+        if(a[i]!=' ')
+        b[w][c++]=a[i];
+        else{
+            b[w][c]=0;
+            w++;
+            c=0;
+        //b[w][c]=0;
+        }
+        b[w][c]=0;
+    }
+    for(j=0;j<=w;j++){
+    if(strcmp(b[j],f)==0)
+    {
+    strcpy(b[j],r);
+    }
+    
+    printf("%s ",b[j]);}
+    return 0;
+}
+
+
